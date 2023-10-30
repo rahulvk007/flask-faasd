@@ -37,5 +37,9 @@ def main_route(path):
     ret = handler.handle(request.get_data(as_text=as_text))
     return ret
 
+@app.route("/hello")
+def hello():
+    return "Hello Faasd"
+
 if __name__ == '__main__':
     serve(app, host='0.0.0.0', port=5000)
