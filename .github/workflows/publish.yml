@@ -3,7 +3,7 @@ name: publish
 on:
   push:
     branches:
-      - main # Adjust the branch as needed
+      - main 
 
 jobs:
   publish-hello-docker-image:
