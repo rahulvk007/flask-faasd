@@ -60,9 +60,6 @@ def home():
         db.session.commit()
         return "Success"
     
-    test = FFCS_members.query.all()
-    for i in test:
-        print(i)
     return render_template("form.html")
 
 if __name__ == '__main__':
