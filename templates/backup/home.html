@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div class="p-5 text-center bg-light" style="margin-top: 58px;">
+    <h1 class="mb-3">Interview Slot Booking</h1><br>
+    <h4 class="mb-3">Choose Your Slot below</h4>
+<br>
+
+<style>
+    .center-container{
+        width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+
+<div class="center-container">
+    <form method="post">
+    <select class="form-select" name="selectedslot" aria-label="Default select example">
+        <option selected>Available Slots for {{ dept }}</option>
+        {% for i in slotdata %}
+        <option value="{{ i.slot }}">{{ i.slot }}</option>
+        {% endfor %}
+      </select>
+      <br>
+      <button type="submit" name="submit" class="btn btn-primary">CONFIRM SLOT</button>
+      </form>
+</div>
+</div>
+
+
+
+
+
+{% endblock %}

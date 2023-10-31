@@ -1,0 +1,130 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="p-5 text-center bg-light" style="margin-top: 58px;">
+
+<br>
+<h1>Technical</h1>
+<table class="table table-hover">
+
+    <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Registration Number</th>
+          <th scope="col">Department</th>
+          <th scope="col">Slot</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+            {% for i in technical %}
+            <td>{{ i.name }}</td>
+            <td>{{ i.regno }}</td>
+            <td>{{ i.department }}</td>
+            <td>{{ i.slot }}</td>
+            {% endfor %}
+        </tr>
+      </tbody>
+
+</table>
+<br>
+<h1>Management</h1>
+<table class="table table-hover">
+
+    <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Registration Number</th>
+          <th scope="col">Department</th>
+          <th scope="col">Slot</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+            {% for i in management %}
+            <td>{{ i.name }}</td>
+            <td>{{ i.regno }}</td>
+            <td>{{ i.department }}</td>
+            <td>{{ i.slot }}</td>
+            {% endfor %}
+        </tr>
+      </tbody>
+
+</table>
+<br>
+<h1>Operations</h1>
+<table class="table table-hover">
+
+    <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Registration Number</th>
+          <th scope="col">Department</th>
+          <th scope="col">Slot</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+            {% for i in operations %}
+            <td>{{ i.name }}</td>
+            <td>{{ i.regno }}</td>
+            <td>{{ i.department }}</td>
+            <td>{{ i.slot }}</td>
+            {% endfor %}
+        </tr>
+      </tbody>
+
+</table>
+<br>
+
+<h1>Media</h1>
+<table class="table table-hover">
+
+    <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Registration Number</th>
+          <th scope="col">Department</th>
+          <th scope="col">Slot</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+            {% for i in media %}
+            <td>{{ i.name }}</td>
+            <td>{{ i.regno }}</td>
+            <td>{{ i.department }}</td>
+            <td>{{ i.slot }}</td>
+            {% endfor %}
+        </tr>
+      </tbody>
+
+</table>
+<br>
+<h1>Content</h1>
+<table class="table table-hover">
+
+    <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Registration Number</th>
+          <th scope="col">Department</th>
+          <th scope="col">Slot</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+            {% for i in content %}
+            <td>{{ i.name }}</td>
+            <td>{{ i.regno }}</td>
+            <td>{{ i.department }}</td>
+            <td>{{ i.slot }}</td>
+            {% endfor %}
+        </tr>
+      </tbody>
+
+</table>
+
+</div>
+
+{% endblock %}

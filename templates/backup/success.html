@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="p-5 text-center bg-light" style="margin-top: 58px;">
+
+<h2>Slot Booked !!!</h2>
+<br>
+{% for i in slt %}
+<h3>Your slot for {{ i.department }} is {{ i.slot }}</h3>
+{% endfor %}
+
+</div>
+
+{% endblock %}

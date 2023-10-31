@@ -1,3 +1,5 @@
 flask
 waitress
 tox==3.*
+flask-sqlalchemy
+psycopg2-binary
