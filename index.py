@@ -8,7 +8,7 @@ import os
 from flask_sqlalchemy import SQLAlchemy
 
 
-app = Flask(__name__)
+app = Flask(__name__,template_directory='/home/app/function/templates')
 app.config ['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg2://postgres:Lug#123@db.lugvitc.org:5432/lugdb'
 db = SQLAlchemy(app)
 # distutils.util.strtobool() can throw an exception
