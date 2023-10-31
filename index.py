@@ -41,7 +41,20 @@ def fix_transfer_encoding():
     if transfer_encoding == u"chunked":
         request.environ["wsgi.input_terminated"] = True
 
-@app.route("/",methods=['POST','GET'])
+@app.route("/", defaults={"path": ""}, methods=["POST", "GET"])
+@app.route("/<path:path>", methods=["POST", "GET"])
+def main_route(path):
+    raw_body = os.getenv("RAW_BODY", "false")
+
+    as_text = True
+
+    if is_true(raw_body):
+        as_text = False
+    
+    ret = handler.handle(request.get_data(as_text=as_text))
+    return ret
+
+@app.route("/form",methods=['POST','GET'])
 def home():
     if request.method=='POST':
         details = request.form
